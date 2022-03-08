@@ -1,0 +1,69 @@
+.board-list li,
+.board-list a {
+  overflow: auto;
+}
+
+.board-no,
+.board-title,
+.board-writer,
+.board-date,
+.board-count {
+  float: left;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.board-no {
+  width: 3em;
+}
+.board-writer {
+  width: 6em;
+}
+.board-date {
+  width: 6em;
+}
+.board-count {
+  width: 4em;
+}
+.board-title {
+  width: calc(100% - 20em);
+}
+
+.board-no,
+.board-writer,
+.board-date,
+.board-count {
+  text-align: center;
+}
+
+#fixLine {
+  list-style: none;
+  height: 1px;
+  background-color: darkgrey;
+}
+
+@media all and (max-width: 767px) {
+  .board-no,
+  .board-count {
+    display: none;
+  }
+  .board-title {
+    width: calc(100% - 13em);
+  }
+}
+
+@media all and (max-width: 500px) {
+  .board-title {
+    width: 100;
+  }
+  .board-date {
+    float: right;
+  }
+  .board-date,
+  .board-writer {
+    font-size: 0.85em;
+  }
+}
